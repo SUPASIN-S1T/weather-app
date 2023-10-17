@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* main */
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* ANIMATION FADE-IN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animation-active {
+    animation: fadeIn 3s;
+}
+
+/* card display */
+.weather-container {
+    width: 450px;
+    height: 480px;
+    border-radius: 4px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.input-search {
+    width: 100%;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.weather-title {
+    display: grid;
+    place-items: center;
+}
+
+.weather-title img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.weather-title h1 {
+    font-size: 4rem;
+}
+
+.weather-title h2 {
+    font-size: 2rem;
+}
+
+.weather-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-top: 0.5rem;
+}
+
+.weather-sub-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+i.fa-solid {
+    font-size: 1.8rem;
+}
+
+.humidity, .wind-speed {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+
+@media screen and (max-width :600px) {
+    .main-container {
+        padding: 1rem;
+    }
+
+    .weather-container {
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+}
